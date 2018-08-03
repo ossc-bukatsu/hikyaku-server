@@ -12,7 +12,7 @@ Quick Start
 
 ::
 
-    $ git clone https://github.com/k-tamura/hikyaku-server.git
+    $ git clone https://github.com/ossc-bukatsu/hikyaku-server
     $ cd hikyaku-server/
     $ python3 -m venv venv
     $ source venv/bin/activate
