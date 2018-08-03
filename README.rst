@@ -25,3 +25,40 @@ Quick Start
 Access to the admin console: http://localhost:8000/admin/
 
 Access to the user maintenance API: http://localhost:8000/api/
+
+Operation Examples
+--------------------
+
+Create a user:
+::
+    $ curl -X POST http://127.0.0.1:8000/api/users/ -d "name=user01" -d "mail=user01@gmail.com" -d "password=password" -d "point=12" -d "note=090-9999-8888"
+    {"id":8,"name":"user01","mail":"user01@gmail.com","password":"password","point":12,"note":"090-9999-8888"}
+
+Read the user:
+::
+    $ curl http://127.0.0.1:8000/api/users/8/
+    {"id":8,"name":"user01","mail":"user01@gmail.com","password":"password","point":12,"note":"090-9999-8888"}t
+
+Create another user:
+::
+    $ curl -X POST http://127.0.0.1:8000/api/users/ -d "name=user02" -d "mail=user02@gmail.com" -d "password=password" -d "point=12" -d "note=090-9999-8888"
+    {"id":9,"name":"user02","mail":"user02@gmail.com","password":"password","point":12,"note":"090-9999-8888"}
+
+Read users:
+::
+    $ curl http://127.0.0.1:8000/api/users/
+    {"count":2,"next":null,"previous":null,"results":[{"id":8,"name":"user01","mail":"user01@gmail.com","password":"password","point":12,"note":"090-9999-8888"},{"id":9,"name":"user02","mail":"user02@gmail.com","password":"password","point":12,"note":"090-9999-8888"}]}
+
+Update the first user:
+::
+    $ curl -X PUT http://127.0.0.1:8000/api/users/8/  -d "name=user01" -d "mail=user01@gmail.com" -d "password=password" -d "point=15" -d "note=090-9999-8888"
+    {"id":8,"name":"user01","mail":"user01@gmail.com","password":"password","point":15,"note":"090-9999-8888"}t
+
+Delete the second user:
+::
+    curl -X DELETE http://127.0.0.1:8000/api/users/9/
+
+Read the users:
+::
+    $ curl http://127.0.0.1:8000/api/users/
+    {"count":1,"next":null,"previous":null,"results":[{"id":8,"name":"user01","mail":"user01@gmail.com","password":"password","point":15,"note":"090-9999-8888"}]}
