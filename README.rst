@@ -1,4 +1,4 @@
- .. image:: https://img.shields.io/badge/License-MIT-yellow.svg?style=flat
+.. image:: https://img.shields.io/badge/License-MIT-yellow.svg?style=flat
     :target: https://opensource.org/licenses/MIT
     :alt: License
 
@@ -6,6 +6,8 @@ Hikyaku Server
 ================
 
 API server in Hikyaku system.
+
+.. image:: /hikyaku_logo.png
 
 Quick Start
 --------------------
