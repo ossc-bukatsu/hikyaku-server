@@ -8,7 +8,8 @@ Hikyaku Server
 API server in Hikyaku system.
 
 .. image:: /hikyaku_logo.png
-
+.. image:: /hikyaku_logo2.png
+.. image:: /hikyaku_logo3.png
 Quick Start
 --------------------
 
